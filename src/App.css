@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: dark;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  button {
+    @apply transition-all duration-300;
+  }
+
+  input {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    @apply font-tabular-nums;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyan-600/40 rounded-full hover:bg-cyan-600/60;
+  }
+}

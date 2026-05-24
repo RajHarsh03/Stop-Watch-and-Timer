@@ -39,8 +39,10 @@
 }
 
 @layer utilities {
-  .tabular-nums {
-    @apply font-tabular-nums;
+  @supports (font-variant-numeric: tabular-nums) {
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
   }
 
   ::-webkit-scrollbar {
